@@ -1,4 +1,4 @@
-fn binarySearch(input: &Vec<i32>, e: i32) -> i32 {
+fn binary_search(input: &Vec<i32>, e: i32) -> i32 {
   let mut left = 0;
   let mut right = input.len() - 1;
 
@@ -11,7 +11,6 @@ fn binarySearch(input: &Vec<i32>, e: i32) -> i32 {
           left = mid + 1;
       } else {
           return input[mid];
-          break;
       }
   }
 
@@ -39,7 +38,7 @@ fn main() {
   vec.sort();
 
   for x in vec.iter() {
-      let f = binarySearch(&vec, 2020 - x);
+      let f = binary_search(&vec, 2020 - x);
 
       if f != -1 {
           println!("{}", x * f);
